@@ -6,20 +6,6 @@
 <title>Ramadan Kareem</title>
 
 <style>
-    /* 🌙 Moon Glow */
-body::after{
-    box-shadow:0 0 120px rgba(255,215,0,0.15) inset;
-}
-
-/* ✨ Golden Text Glow */
-.card{
-    animation:goldGlow 2s ease-in-out infinite alternate;
-}
-
-@keyframes goldGlow{
-    from{ text-shadow:0 0 8px #fff,0 0 18px gold;}
-    to{ text-shadow:0 0 18px #fff,0 0 40px #ffd700;}
-}
 body{
     margin:0;
     height:100vh;
@@ -116,12 +102,7 @@ Click Here ✨🌙
 
 <div class="dates-bg"></div>
 
-<!-- 🎵 Background Music -->
-<audio id="bgMusic" loop>
-<source src="parkle.mp3" type="audio/mpeg">
-</audio>
-
-<!-- ✨ Sparkle Sound -->
+<!-- ✨ Sparkle Sound LOCAL -->
 <audio id="sparkleSound">
 <source src="parkle.mp3" type="audio/mpeg">
 </audio>
@@ -132,21 +113,18 @@ function showRamadan(e){
 
     document.getElementById("card").innerText =
 `✨1 st ✨ Ramadan Kareem
-From🌷 Hiba Mohammad 👑
-(Tap anywhere and your good deed may be rewarded 70 times. 🌙)`;
+From🌷 Hiba Mohammad 👑`;
 }
 
 function showAstagfirullah(e){
 
-   let sound = document.getElementById("sparkleSound");
+    let sound = document.getElementById("sparkleSound");
     sound.currentTime = 0;
-    sound.muted = false;
     sound.play();
 
     let text = document.createElement("div");
     text.className = "astagfirullah";
-    text.innerText = "✨ Astaghfirullah ✨ x1
-        70 times";
+    text.innerText = "✨ Astaghfirullah ✨";
 
     text.style.left = e.clientX + "px";
     text.style.top = e.clientY + "px";
