@@ -6,6 +6,20 @@
 <title>Ramadan Kareem</title>
 
 <style>
+    /* 🌙 Moon Glow */
+body::after{
+    box-shadow:0 0 120px rgba(255,215,0,0.15) inset;
+}
+
+/* ✨ Golden Text Glow */
+.card{
+    animation:goldGlow 2s ease-in-out infinite alternate;
+}
+
+@keyframes goldGlow{
+    from{ text-shadow:0 0 8px #fff,0 0 18px gold;}
+    to{ text-shadow:0 0 18px #fff,0 0 40px #ffd700;}
+}
 body{
     margin:0;
     height:100vh;
